@@ -27,15 +27,15 @@ class MainActivity : AppCompatActivity() {
 
     private fun runCoroutines(){
         GlobalScope.launch{
-            var aaa = 0
-            while (aaa <= 100) {
+            var a = 0
+            while (a <= 100) {
                 try {
                     delay(50L)
                     val msg = Message()
                     msg.what = 1
                     mHandler.sendMessage(msg)
-                    aaa++
-                    progress1 = aaa
+                    a++
+                    progress1 = a
                 } catch (e: InterruptedException) {
                     e.printStackTrace()
                 }
